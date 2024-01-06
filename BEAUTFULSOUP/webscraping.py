@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-url =""
+url ="https://www.amazon.in/b/?_encoding=UTF8&node=15325111031&pd_rd_w=z7mBk&content-id=amzn1.sym.b25e0925-6d5c-48be-9247-464080b72908&pf_rd_p=b25e0925-6d5c-48be-9247-464080b72908&pf_rd_r=FGW555MN43TBBMTJDW51&pd_rd_wg=9KGPE&pd_rd_r=06b79353-01f7-416c-8cd7-4037a4611a7b"
 r = requests.get(url)
 htmlContent = r.content
 # print(htmlContent)
@@ -36,6 +36,6 @@ all_links = set()
 #get all the links on the page:
 for link in anchors:
     if(link.get('href') !='#');
-    linkText ="https://" +link.get('href')
+    linkText ="https://www.amazon.in/b/?_encoding=UTF8&node=15325111031&pd_rd_w=z7mBk&content-id=amzn1.sym.b25e0925-6d5c-48be-9247-464080b72908&pf_rd_p=b25e0925-6d5c-48be-9247-464080b72908&pf_rd_r=FGW555MN43TBBMTJDW51&pd_rd_wg=9KGPE&pd_rd_r=06b79353-01f7-416c-8cd7-4037a4611a7b" +link.get('href')
     all_links.add(link)
     print(linkText)
